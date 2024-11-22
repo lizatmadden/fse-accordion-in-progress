@@ -1,0 +1,127 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"version": "1.0.0",
+	"name": "madden-theme/faq-accordion",
+	"title": "[MM] FAQ Accordion",
+	"description": "Accordion block to display frequently asked questions",
+	"icon": "editor-help",
+	"category": "madden-media",
+	"render": "file:./render.php",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"viewScript": "file:./view.js",
+	"viewStyle": "file:./style-index.css",
+	"supports": {
+		"anchor": true,
+		"typography": {
+			"fontSize": true,
+			"__experimentalFontFamily": true
+		},
+		"color": {
+			"background": true,
+			"text": false,
+			"heading": true
+		},
+		"__experimentalBorder": {
+			"color": true,
+			"radius": true,
+			"style": true,
+			"width": true
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"attributes": {
+		"anchor": {
+			"type": "string"
+		},
+		"qa": {
+			"type": "array",
+			"default": [{
+				"question": "",
+				"answer": ""
+			}]
+		},
+		"cId": {
+			"type": "string",
+			"default": ""
+		},
+		"outputSchema": {
+			"type": "boolean",
+			"default": true
+		},
+		"openFirstItem": {
+			"type": "boolean",
+			"default": true
+		},
+		"mode" : {
+			"type" : "string",
+			"default" : "edit"
+		},
+		"faqColor": {
+			"type": "object",
+			"default": {}
+		},
+		"faqBgColor": {
+			"type": "object",
+			"default": {}
+		},
+		"activeFaqColor": {
+			"type": "object",
+			"default": {}
+		},
+		"activeFaqBgColor": {
+			"type": "object",
+			"default": {}
+		},
+		"hoverFaqColor": {
+			"type": "object",
+			"default": {}
+		},
+		"hoverFaqBgColor": {
+			"type": "object",
+			"default": {}
+		},
+		"faqGap": {
+			"type": "object",
+			"default": {}
+		},
+		"faqPadding": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"styles": [
+		{
+			"name": "horizontal",
+			"label": "Horizontal"
+		},
+		{
+			"name": "vertical",
+			"label": "Vertical",
+			"isDefault": true
+		}
+	],
+	"example": {
+		"attributes": {
+			"qa": [
+				{
+					"question": "Sample question",
+					"answer": "Sample answer"
+				},
+				{
+					"question": "Sample question",
+					"answer": "Sample answer"
+				},
+				{
+					"question": "Sample question",
+					"answer": "Sample answer"
+				}
+			],
+			"mode": "preview"
+		}
+	}
+}
